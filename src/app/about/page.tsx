@@ -19,9 +19,9 @@ import {
     FaFacebook,
     FaInstagram,
     FaDatabase,
-    FaGraduationCap, FaBriefcase, FaMusic, FaCameraRetro, FaPlane, FaBookOpen, FaUserTie, FaMedal
+    FaGraduationCap, FaMusic, FaPlane, FaBookOpen, FaUserTie, FaMedal
 } from "react-icons/fa";
-import {GiNetworkBars, GiSkills, GiWeightLiftingUp} from "react-icons/gi";
+import {GiNetworkBars} from "react-icons/gi";
 
 export default function About() {
     return (

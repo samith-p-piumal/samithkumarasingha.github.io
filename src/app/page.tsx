@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
+import {FaFacebook, FaInstagram, FaLinkedin} from "react-icons/fa";
 
 export default function Home() {
     return (
