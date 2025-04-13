@@ -11,7 +11,17 @@
 
 // app/about/page.jsx
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaTwitter, FaCode, FaServer, FaBrain } from "react-icons/fa";
+import {
+    FaLinkedin,
+    FaCode,
+    FaServer,
+    FaBrain,
+    FaFacebook,
+    FaInstagram,
+    FaDatabase,
+    FaGraduationCap, FaBriefcase, FaMusic, FaCameraRetro, FaPlane, FaBookOpen
+} from "react-icons/fa";
+import {GiWeightLiftingUp} from "react-icons/gi";
 
 export default function About() {
     return (
@@ -27,7 +37,7 @@ export default function About() {
                         <div className="md:w-1/3 p-6 flex justify-center">
                             <div className="relative h-64 w-64 rounded-full overflow-hidden border-4 border-blue-100">
                                 <Image
-                                    src="/profile.jpg" // Replace with your image path
+                                    src="/profile.jpeg" // Replace with your image path
                                     alt="Samith Kumarasingha"
                                     layout="fill"
                                     objectFit="cover"
@@ -46,11 +56,14 @@ export default function About() {
                             <div className="mb-8">
                                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Skills & Expertise</h3>
                                 <div className="flex flex-wrap gap-3">
-                                    <span className="flex items-center px-3 py-1 bg-blue-100 text-blue-800 rounded-full">
-                                        <FaCode className="mr-2" /> Frontend (React, Next.js)
-                                    </span>
                                     <span className="flex items-center px-3 py-1 bg-green-100 text-green-800 rounded-full">
-                                        <FaServer className="mr-2" /> Backend (Node.js, Java)
+                                        <FaServer className="mr-2" /> Backend (Java, Node.js, GO)
+                                    </span>
+                                    <span className="flex items-center px-3 py-1 bg-blue-100 text-blue-800 rounded-full">
+                                        <FaCode className="mr-2" /> Frontend (React, Angular, Next.js)
+                                    </span>
+                                    <span className="flex items-center px-3 py-1 bg-purple-100 text-purple-800 rounded-full">
+                                        <FaDatabase className="mr-2" /> MYSql, Oracle, MSSql, MongoDB
                                     </span>
                                     <span className="flex items-center px-3 py-1 bg-purple-100 text-purple-800 rounded-full">
                                         <FaBrain className="mr-2" /> AI/ML
@@ -61,17 +74,17 @@ export default function About() {
                             <div>
                                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Connect With Me</h3>
                                 <div className="flex space-x-4">
-                                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"
-                                       className="text-gray-700 hover:text-blue-600 transition-colors duration-300">
-                                        <FaGithub size={24} />
-                                    </a>
-                                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer"
+                                    <a href="https://www.linkedin.com/in/samithkumarasingha/" target="_blank" rel="noopener noreferrer"
                                        className="text-gray-700 hover:text-blue-600 transition-colors duration-300">
                                         <FaLinkedin size={24} />
                                     </a>
-                                    <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer"
+                                    <a href="https://www.facebook.com/samith.p.piumal" target="_blank" rel="noopener noreferrer"
                                        className="text-gray-700 hover:text-blue-600 transition-colors duration-300">
-                                        <FaTwitter size={24} />
+                                        <FaFacebook size={24} />
+                                    </a>
+                                    <a href="https://www.instagram.com/samithkumarasingha/" target="_blank" rel="noopener noreferrer"
+                                       className="text-gray-700 hover:text-blue-600 transition-colors duration-300">
+                                        <FaInstagram size={24} />
                                     </a>
                                 </div>
                             </div>
@@ -82,24 +95,37 @@ export default function About() {
                 <div className="mt-12 grid md:grid-cols-3 gap-8">
                     <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                         <h3 className="text-xl font-semibold text-gray-800 mb-3">Education</h3>
-                        <p className="text-gray-600">
-                            Bachelor's in Computer Science<br />
-                            University of XYZ, 20XX
+                        <p className="text-gray-600" >
+                            <FaGraduationCap className="text-black" />
+                            <b>BCSc - Bachelor of Computer Science</b><br />
+                            University of Colombo School of Computing: September 2011 - February  2015<br /><br />
+                            <FaGraduationCap className="text-black" />
+                            <b>MIS - Master of Information Security</b><br />
+                            University of Colombo School of Computing: October 2021 - January  2024
                         </p>
                     </div>
                     <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                         <h3 className="text-xl font-semibold text-gray-800 mb-3">Experience</h3>
                         <p className="text-gray-600">
-                            Software Developer at ABC Corp<br />
-                            20XX - Present
+                            <FaBriefcase className="text-black" />
+                            Software Engineer<br />
+                            2015 February - Present
                         </p>
                     </div>
                     <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                         <h3 className="text-xl font-semibold text-gray-800 mb-3">Hobbies</h3>
+                        <div className="flex gap-4 items-center">
+                            <FaMusic className="text-black" />
+                            <FaCameraRetro className="text-black" />
+                            <FaPlane className="text-black" />
+                            <FaBookOpen className="text-black" />
+                            <GiWeightLiftingUp className="text-black" />
+                        </div>
                         <p className="text-gray-600">
-                            Open Source Contributions<br />
+                            Play guitar(Base and Rythm)<br />
+                            Traveling, Hiking & Road trip<br />
                             Learning new technologies<br />
-                            Hiking & Photography
+
                         </p>
                     </div>
                 </div>
