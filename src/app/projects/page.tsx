@@ -1,34 +1,3 @@
-
-
-// export default function Page() {
-//     return (
-//         <div className="min-h-screen flex flex-col justify-center items-center bg-gray-50 p-6">
-//             <h1 className="text-3xl font-bold text-gray-800 mb-4">My Projects</h1>
-//             <ul className="space-y-4">
-//                 <li>
-//                     <a
-//                         href="https://github.com/yourusername/project1"
-//                         target="_blank"
-//                         className="text-lg text-blue-600 hover:underline"
-//                     >
-//                         Project 1: Description of the project.
-//                     </a>
-//                 </li>
-//                 <li>
-//                     <a
-//                         href="https://github.com/yourusername/project2"
-//                         target="_blank"
-//                         className="text-lg text-blue-600 hover:underline"
-//                     >
-//                         Project 2: Another cool project.
-//                     </a>
-//                 </li>
-//             </ul>
-//         </div>
-//     );
-// }
-
-// app/projects/page.tsx
 "use client"; // Add this directive at the top
 
 import { FiGithub, FiExternalLink } from "react-icons/fi";
@@ -52,7 +21,7 @@ const projects = [
         tags: ["Next.js", "MongoDB", "Stripe", "Tailwind CSS"],
         githubUrl: "https://github.com/yourusername/ecommerce-platform",
         liveUrl: "https://your-ecommerce-site.com",
-        imageUrl: "/project2.jpg"
+        imageUrl: "/project2.png"
     },
     {
         id: 3,
@@ -61,7 +30,34 @@ const projects = [
         tags: ["React Native", "Firebase", "D3.js", "Redux"],
         githubUrl: "https://github.com/yourusername/fitness-tracker",
         liveUrl: "https://your-fitness-app.com",
-        imageUrl: "/project3.jpg"
+        imageUrl: "/project3.png"
+    },
+    {
+        id: 4,
+        title: "Health & Fitness Tracker",
+        description: "Mobile-first application for tracking workouts, nutrition, and health metrics with data visualization.",
+        tags: ["React Native", "Firebase", "D3.js", "Redux"],
+        githubUrl: "https://github.com/yourusername/fitness-tracker",
+        liveUrl: "https://your-fitness-app.com",
+        imageUrl: "/project4.png"
+    },
+    {
+        id: 5,
+        title: "Health & Fitness Tracker",
+        description: "Mobile-first application for tracking workouts, nutrition, and health metrics with data visualization.",
+        tags: ["React Native", "Firebase", "D3.js", "Redux"],
+        githubUrl: "https://github.com/yourusername/fitness-tracker",
+        liveUrl: "https://your-fitness-app.com",
+        imageUrl: "/project5.png"
+    },
+    {
+        id: 6,
+        title: "Health & Fitness Tracker",
+        description: "Mobile-first application for tracking workouts, nutrition, and health metrics with data visualization.",
+        tags: ["React Native", "Firebase", "D3.js", "Redux"],
+        githubUrl: "https://github.com/yourusername/fitness-tracker",
+        liveUrl: "https://your-fitness-app.com",
+        imageUrl: "/project6.png"
     },
 ];
 
