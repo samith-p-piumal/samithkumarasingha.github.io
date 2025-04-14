@@ -3,6 +3,8 @@
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import {FaHome} from "react-icons/fa";
 
 const projects = [
     {
@@ -71,7 +73,7 @@ export default function Projects() {
         : projects.filter(project => project.tags.includes(activeFilter));
 
     return (
-        <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen animated-gradient bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold text-gray-800 mb-4">My Projects</h1>
@@ -146,6 +148,15 @@ export default function Projects() {
                         </div>
                     ))}
                 </div>
+            </div>
+            <div className="fixed bottom-6 right-6 z-50">
+                <Link
+                    href="/"
+                    className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all hover:scale-110"
+                    aria-label="Return to home"
+                >
+                    <FaHome className="h-5 w-5" />
+                </Link>
             </div>
         </div>
     );
