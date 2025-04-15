@@ -1,17 +1,32 @@
-"use client"; // Add this directive at the top
+"use client";
 
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {FaHome} from "react-icons/fa";
+import {FaCode, FaHome, FaServer, FaTasks} from "react-icons/fa";
 
 const projects = [
     {
         id: 1,
-        title: "AI-Powered Chat Application",
-        description: "A real-time chat application with AI moderation features built using React, Node.js, and TensorFlow.js.",
-        tags: ["React", "Node.js", "AI", "WebSockets"],
+        title: "UOB Bank - Singapore",
+        description: "Led the development of core systems, including the TMRW App backend, Bank Admin, and PIB platforms, aimed at streamlining banking operations and enhancing customer experiences. Focused on implementing secure authentication, optimizing batch processes, and delivering responsive web solutions to support seamless digital banking services and user engagement. ",
+        responsibilities:
+            "Developed and maintained backend services for the TMRW App and PIB systems using Java 8, 9, and 11.\n" +
+            "Built and enhanced the Bank Admin system, handling various administrative functionalities.\n" +
+            "Implemented customer-facing features in the PIB Customer Web App, working on both frontend (FE) and web services (WS).\n" +
+            "Utilized JavaServer Pages (JSP) for dynamic web content generation.\n" +
+            "Developed and optimized Java batch processing systems for PIB (Batch, EDAG, BatchReport).\n" +
+            "Managed middleware services using WebLogic 12c and 14c, ensuring scalability and reliability.\n" +
+            "Integrated FIDO2 token authentication for enhanced security across applications.\n" +
+            "Collaborated within Agile teams, tracking progress and issues using JIRA.\n" +
+            "Led deployment and release activities, coordinating across teams to ensure smooth rollouts.\n",
+        technologies: "Java(8,9,11,17)\n Apache Camel\n OCP\n Weblogic(12c, 14c)\n Oracle\n MQ\n JSP\n CSS\n HTML\n FIDO2\n Spring batch\n JIRA\n Agile methodologies\n FIDO2 token authentication\n Splunk\n",
+        projects: "TMRW App Backend(SPL , DGE)|This is project details\n " +
+            "PIB(Batch, EDAG, BatchReport)|Mange backend opertions like dayily cron jobs, batch execution and report generation\n " +
+            "PIB Customer Web App(FE,WS)|Customer web application\n Bank Admin|Bank officers, customer support web application",
+        role: "Role: System Programmer",
+        tags: ["Java", "Apache Camel", "OCP", "Weblogic", "FIDO2", "Splunk"],
         githubUrl: "https://github.com/yourusername/ai-chat-app",
         liveUrl: "https://your-chat-app.com",
         imageUrl: "/project1.jpg"
@@ -55,7 +70,10 @@ const projects = [
     {
         id: 6,
         title: "Health & Fitness Tracker",
-        description: "Mobile-first application for tracking workouts, nutrition, and health metrics with data visualization.",
+        description: "Mobile-first application for tracking workouts, nutrition, and health metrics with data visualization." +
+            "Mobile-first application for tracking workouts, nutrition, and health metrics with data visualization." +
+            "Mobile-first application for tracking workouts, nutrition, and health metrics with data visualization." +
+            "Mobile-first application for tracking workouts, nutrition, and health metrics with data visualization.",
         tags: ["React Native", "Firebase", "D3.js", "Redux"],
         githubUrl: "https://github.com/yourusername/fitness-tracker",
         liveUrl: "https://your-fitness-app.com",
@@ -65,32 +83,33 @@ const projects = [
 
 export default function Projects() {
     const [activeFilter, setActiveFilter] = useState("All");
-
-    const filters = ["All", "Web", "Mobile", "AI", "Fullstack"];
+    const filters = ["All", "Java", "Next.js", "React Native"];
 
     const filteredProjects = activeFilter === "All"
         ? projects
         : projects.filter(project => project.tags.includes(activeFilter));
 
     return (
-        <div className="min-h-screen animated-gradient bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto">
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+                {/* Header */}
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold text-gray-800 mb-4">My Projects</h1>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Here are some of my featured projects. Each one was built to solve a specific problem or explore new technologies.
+                    <h1 className="text-4xl font-bold text-gray-800 mb-4">My Professional Projects</h1>
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Explore my work experience and technical contributions across various domains
                     </p>
                 </div>
 
+                {/* Filters */}
                 <div className="flex flex-wrap justify-center gap-3 mb-12">
                     {filters.map(filter => (
                         <button
                             key={filter}
                             onClick={() => setActiveFilter(filter)}
-                            className={`px-4 py-2 rounded-full transition-all duration-300 ${
+                            className={`px-4 py-2 rounded-full transition-all duration-300 text-sm font-medium ${
                                 activeFilter === filter
-                                    ? "bg-blue-600 text-white"
-                                    : "bg-white text-gray-700 hover:bg-gray-100"
+                                    ? "bg-blue-600 text-white shadow-md"
+                                    : "bg-white text-gray-700 hover:bg-gray-100 shadow-sm"
                             }`}
                         >
                             {filter}
@@ -98,49 +117,154 @@ export default function Projects() {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Projects Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {filteredProjects.map(project => (
-                        <div
-                            key={project.id}
-                            className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
-                        >
-                            <div className="relative h-48 overflow-hidden">
+                        <div key={project.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group border border-gray-100">
+                            {/* Project Header */}
+                            <div className="relative h-48 w-full overflow-hidden">
                                 <Image
                                     src={project.imageUrl}
                                     alt={project.title}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <div className="flex space-x-3">
-                                        {project.tags.map(tag => (
-                                            <span key={tag} className="text-xs bg-white/20 text-white px-2 py-1 rounded-full backdrop-blur-sm">
-                                                {tag}
-                                            </span>
-                                        ))}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                                    <div>
+                                        <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                                        <p className="text-blue-200 font-medium">{project.role}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
-                                <p className="text-gray-600 mb-4">{project.description}</p>
-                                <div className="flex space-x-3">
-                                    <a
-                                        href={project.githubUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300"
-                                    >
-                                        <FiGithub className="mr-1" /> Code
-                                    </a>
+
+                            {/* Project Content */}
+                            <div className="p-6 space-y-4">
+                                {/* Projects */}
+                                {project.projects && (
+                                    <div className="mb-6">
+                                        <div className="flex items-center gap-2 text-gray-800 mb-3">
+                                            <FaCode className="text-blue-600" />
+                                            <h4 className="font-semibold">Project Details</h4>
+                                        </div>
+                                        <div className="space-y-3 pl-7">
+                                            {project.projects.split('\n').map((proj, index) => {
+                                                const [projectName, projectDetails] = proj.split('|');
+                                                return (
+                                                    <details
+                                                        key={index}
+                                                        className="group bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors shadow-sm"
+                                                    >
+                                                        <summary className="flex items-center justify-between p-4 cursor-pointer">
+                                                            <div className="flex items-center gap-3">
+                                                                <span className="font-medium text-gray-800">
+                                                                  {projectName.trim()}
+                                                                </span>
+                                                            </div>
+                                                            <svg
+                                                                className="w-5 h-5 text-gray-400 group-open:rotate-90 transition-transform"
+                                                                fill="none"
+                                                                viewBox="0 0 24 24"
+                                                            >
+                                                                <path
+                                                                    stroke="currentColor"
+                                                                    strokeLinecap="round"
+                                                                    strokeLinejoin="round"
+                                                                    strokeWidth="2"
+                                                                    d="M9 5l7 7-7 7"
+                                                                />
+                                                            </svg>
+                                                        </summary>
+                                                        <div className="px-4 pb-4 pt-2 text-gray-600 border-t border-gray-100">
+                                                            {projectDetails ? (
+                                                                <p className="whitespace-pre-line">{projectDetails.trim()}</p>
+                                                            ) : (
+                                                                <p className="text-gray-400">No additional details available</p>
+                                                            )}
+                                                        </div>
+                                                    </details>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+
+                                )}
+
+                                {/* Description */}
+                                <div className="mb-8 w-full">
+                                    <h4 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                                        <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clipRule="evenodd" />
+                                        </svg>
+                                        Description
+                                    </h4>
+                                    <div className="w-full text-justify text-gray-600 leading-relaxed tracking-normal space-y-3">
+                                        {project.description.split('\n').map((paragraph, index) => (
+                                            <p key={index} className="[text-align-last:left] hyphens-auto">
+                                                {paragraph}
+                                            </p>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Technologies */}
+                                {project.technologies && (
+                                    <div>
+                                        <div className="flex items-center gap-2 text-gray-800 mb-2">
+                                            <FaServer className="text-blue-600" />
+                                            <h4 className="font-semibold">Technologies</h4>
+                                        </div>
+                                        <div className="flex flex-wrap gap-2 pl-7">
+                                            {project.technologies.split('\n').map((tech, i) => (
+                                                tech.trim() && (
+                                                    <span key={i} className="bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                                        {tech.replace('Key technologies:', '').trim()}
+                                                    </span>
+                                                )
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Responsibilities */}
+                                {project.responsibilities && (
+                                    <div>
+                                        <div className="flex items-center gap-2 text-gray-800 mb-1">
+                                            <FaTasks className="text-blue-600" />
+                                            <h4 className="font-semibold">Responsibilities</h4>
+                                        </div>
+                                        <ul className="w-full text-justify space-y-2 pl-7 text-gray-600">
+                                            {project.responsibilities.split('\n').map((item, i) => (
+                                                item.trim() && (
+                                                    <li key={i} className="flex gap-2">
+                                                        <span className="text-blue-600">•</span>
+                                                        <span>{item.trim()}</span>
+                                                    </li>
+                                                )
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+
+                                {/* Links */}
+                                <div className="flex gap-4 pt-2">
+                                    {project.githubUrl && (
+                                        <a
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium"
+                                        >
+                                            <FiGithub /> Code
+                                        </a>
+                                    )}
                                     {project.liveUrl && (
                                         <a
                                             href={project.liveUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                                            className="flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium"
                                         >
-                                            <FiExternalLink className="mr-1" /> Live Demo
+                                            <FiExternalLink /> Live Demo
                                         </a>
                                     )}
                                 </div>
@@ -148,15 +272,17 @@ export default function Projects() {
                         </div>
                     ))}
                 </div>
-            </div>
-            <div className="fixed bottom-6 right-6 z-50">
-                <Link
-                    href="/"
-                    className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all hover:scale-110"
-                    aria-label="Return to home"
-                >
-                    <FaHome className="h-5 w-5" />
-                </Link>
+
+                {/* Home Button */}
+                <div className="fixed bottom-6 right-6 z-50">
+                    <Link
+                        href="/"
+                        className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all hover:scale-110"
+                        aria-label="Return to home"
+                    >
+                        <FaHome className="h-5 w-5" />
+                    </Link>
+                </div>
             </div>
         </div>
     );
