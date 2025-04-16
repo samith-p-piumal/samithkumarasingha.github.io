@@ -21,12 +21,18 @@ const projects = [
             "Integrated FIDO2 token authentication for enhanced security across applications.\n" +
             "Collaborated within Agile teams, tracking progress and issues using JIRA.\n" +
             "Led deployment and release activities, coordinating across teams to ensure smooth rollouts.\n",
-        technologies: "Java(8,9,11,17)\n Apache Camel\n OCP\n Weblogic(12c, 14c)\n Oracle\n MQ\n JSP\n CSS\n HTML\n " +
+        technologies: "Java(8,9,11,17)\n Spring Boot\n Apache Camel\n OpenShift Cloud\n Weblogic(12c, 14c)\n Oracle\n MQ\n JSP\n CSS\n HTML\n " +
             "FIDO2\n Spring batch\n JIRA\n Agile methodologies\n FIDO2 token authentication\n Splunk\n",
-        projects: "TMRW App Backend(SPL , DGE)|This is project details\n " +
-            "PIB(Batch, EDAG, BatchReport)|Mange backend opertions like dayily cron jobs, batch execution and report generation\n " +
-            "PIB Customer Web App(FE,WS)|Customer web application\n Bank Admin|Bank officers, customer support web application",
-        role: "System Programmer",
+        projects: "TMRW App Backend(SPL , DGE)|The SPL and DGE modules comprise a comprehensive set of microservices that form the backbone of " +
+            "the TMRW app's backend. They support all essential functionalities required for the application to operate seamlessly, " +
+            "including payments, fund transfers, scheduling, messaging, and more.\n " +
+            "PIB(Batch, EDAG, BatchReport)|PIB (Batch, EDAG, BatchReport) modules manage backend operations such as daily cron jobs, " +
+            "batch processing, and automated report generation.\n " +
+            "PIB Customer Web App(FE,WS)|A customer-facing web application providing users with access to banking features and services " +
+            "through an intuitive frontend and robust web services backend.\n " +
+            "Bank Admin|An internal web application for managing system configurations and bank officer operations. It serves as a support interface for " +
+            "Level 1, 2, and 3 users, enabling efficient customer support and administrative control.",
+        role: "System Programmer (July 2024 - Present)",
         tags: ["Java", "Apache Camel", "OCP", "Weblogic", "FIDO2", "Splunk"],
         githubUrl: "",
         liveUrl: "https://play.google.com/store/apps/details?id=com.uob.mighty.app&pcampaignid=web_share",
@@ -49,7 +55,7 @@ const projects = [
             "Implemented resource optimization solutions for elderly care, including ERP for managing services and automating resource planning.\n" +
             "Ensured mHealth mobile solutions allowed offline access and supported features like patient lists, medications, and examinations.\n" +
             "Coordinated with senior management in Finland and the M C Medisoft country manager in Sri Lanka to align technical goals with business objectives.\n",
-        role: "Associate Tech Lead",
+        role: "Associate Tech Lead (February 2024 - July 2024)",
         githubUrl: "",
         liveUrl: "https://www.mediconsult.fi/ratkaisut/sosiaalihuolto/",
         imageUrl: "/project2.png"
@@ -57,10 +63,10 @@ const projects = [
     {
         id: 3,
         title: "Circles Life - Singapore(Sri Lanka Hub)",
-        projects: "Billing Service|Billing service mange all prepaid & postpaid bill related activities\n " +
-            "Promotion Service|Promotion sevice mange all the promotion related mechanism all over the product\n " +
-            "Catalogue Service|Catalogue Service, overseeing the comprehensive platform catalogue, including products, add-ons, bundles.\n " +
-            "Payment Service|Payment service responsible for capturing all the payments and refunds",
+        projects: "Billing Service|Manages all prepaid and postpaid billing operations, including bill generation, tracking, and payment processing.\n " +
+            "Promotion Service|Handles all promotion-related mechanisms across the product, including campaign management, eligibility checks, and reward processing.\n " +
+            "Catalogue Service|Oversees the comprehensive platform catalogue, managing products, add-ons, and bundles to support dynamic offerings across the system.\n " +
+            "Payment Service|Payment service responsible for capturing and processing all payments and refunds across the platform, ensuring secure and reliable transaction handling.",
         description: "Circles Life is the premier telecommunications company in South Asia and a multinational mobile virtual " +
             "network operator in Singapore. It has around 40 microservices for different tasks and I spearheaded key services vital " +
             "to the platform's success. As part of the dynamic team, I led the Billing Service, ensuring seamless postpaid payment " +
@@ -85,7 +91,7 @@ const projects = [
             "Develop and review Unit tests and integration tests, providing guidance to the AQA team on Service Integration tests and journey Integration tests.\n" +
             "Engage in deployment windows and MD file reviews and offer support for (P1, P2) on-call requests, hotfix review, and deployment with the release team.\n",
         tags: ["Java", "GO", "Node JS"],
-        role: "Associate Tech Lead",
+        role: "Associate Tech Lead (July 2021 - January 2024)",
         githubUrl: "",
         liveUrl: "https://play.google.com/store/apps/details?id=com.circles.selfcare&pcampaignid=web_share",
         imageUrl: "/project3.png"
@@ -93,7 +99,8 @@ const projects = [
     {
         id: 4,
         title: "Payment Services Private Limited & SDB Bank - Sri Lanka",
-        projects: "UPay|Upay, an innovative electronic wallet-based payment application\n " +
+        projects: "UPay|Upay is a digital wallet app supporting payments via Card (tokenized with Mastercard) and CASA, integrated with JustPay. " +
+            "It uses EMV QR for secure merchant-presented QR transactions.\n " +
             "UPos|The UPOS app stands as an indispensable tool, simplifying and fostering the growth of businesses. Merchants can download " +
             "the UPOS app effortlessly, transforming their smartphones into secure platforms for accepting UPay payments.\n " +
             "UPay IPG|The UPayIPG solution delivers a rapid, secure, and dependable payment checkout experience for various eCommerce platforms.",
@@ -122,7 +129,7 @@ const projects = [
             "Guide junior team members in adhering to coding best practices and standards.\n" +
             "Collaborate effectively with third-party components to ensure seamless integration and functionality.\n",
         tags: ["Java", "Angular"],
-        role: "Senior Software Engineer",
+        role: "Senior Software Engineer (July 2017 - July 2021)",
         githubUrl: "",
         liveUrl: "https://play.google.com/store/apps/details?id=com.paymentservices.upay&pcampaignid=web_share",
         imageUrl: "/project4.png"
@@ -130,8 +137,9 @@ const projects = [
     {
         id: 5,
         title: "Epic Lanka (Pvt) Limited - Sri Lanka",
-        role: "Senior Software Engineer & Software Engineer",
-        projects: "Frimi Mobile Wallet|Frimi is a super-smart app for NTB Bank that makes handling money easy.\n " +
+        role: "Senior Software Engineer & Software Engineer (July 2016 - June 2017)",
+        projects: "Frimi Mobile Wallet|Frimi is a highly intelligent mobile wallet app for NTB Bank that simplifies money management, " +
+            "making it easy to handle transactions and finances with efficiency.\n " +
             "ACS - Access Control Server(3D Secure)|ACS (Access Control Server) plays a crucial role in 3D Secure online payments. " +
             "It facilitates real-time Payer Authentication for cardholders upon request from the acquirer. ACS is configured with the " +
             "highest level of security, employing SSL (TLS) protocols, and it holds certifications from major card networks such as " +
@@ -166,9 +174,9 @@ const projects = [
     {
         id: 6,
         title: "Ideahub (Pvt) Limited - Sri Lanka",
-        role: "Software Engineering",
-        projects: "Genie|Genie revolutionises the traditional wallet into a cutting-edge digital platform, safeguarding credit and " +
-            "debit cards, current and savings accounts (CASA), and eZ Cash accounts securely on mobile phones.\n " +
+        role: "Software Engineering (August 2014 - June 2016)",
+        projects: "Genie|Genie transforms the traditional wallet into an advanced digital platform, securely storing credit and debit cards, " +
+            "CASA (current and savings accounts), and eZ Cash accounts on mobile phones.\n " +
             "Snifee|Snifee operates through a straightforward process, users attach a tracking device to the person or " +
             "object they wish to monitor and pre-set specific scenarios for receiving alerts. The Snifee Bee app, available for " +
             "download, transforms a smartphone into a Tracking Beacon.\n " +
@@ -176,7 +184,7 @@ const projects = [
             "products such as DApp. The DApp Android application empowers customers to explore deals, vouchers, and more, " +
             "seamlessly integrated with Java backend services. The development incorporates cutting-edge technologies, including GPS and " +
             "BLE, enhancing the user experience.\n " +
-            "Menutab|Menutab is a meal ordering system for MAS ACTIVE(Pvt) Ltd. It is fully configurable and consists of an order management workflow with a cost management system.",
+            "Menutab|Menutab is a meal ordering system. It is fully configurable and consists of an order management workflow with a cost management system.",
         description: "Genie revolutionises the traditional wallet into a cutting-edge digital platform, safeguarding credit and debit cards, " +
             "current and savings accounts (CASA), and eZ Cash accounts securely on mobile phones. Offering a frictionless payment journey " +
             "across in-app, Over-the-counter (OTC via QR Code), web, and remote transactions, Genie ensures a seamless and secure " +
@@ -209,7 +217,7 @@ export default function Projects() {
         : projects.filter(project => project.tags.includes(activeFilter));
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen animated-gradient bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
